@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+	--dark-cyan: hsl(158, 36%, 37%);
+	--cream: hsl(30, 38%, 92%);
+	--very-dark-blue: hsl(212, 21%, 14%);
+	--dark-grayish-blue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
+	
+	--ff-montserrat: 'Montserrat', sans-serif;
+	--ff-fraunces: 'Fraunces', serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--ff-montserrat);
+	font-size: 0.875rem;
+	color: var(--dark-grayish-blue);
+	background-color: var(--cream);
+
+	display: flex;
+	height: calc(100vh - 0.1px);
+	align-items: center;
+	justify-content: center;
+	
+	margin: 1rem;
+	overflow: hidden;
+}
+
+.card {
+	display: grid;
+	background-color: var(--white);
+	line-height: 1.7;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	max-width: 600px;
+}
+
+.card-content {
+	display: grid;
+	padding: 1.5rem;
+	gap: 1rem;
+}
+
+.card-picture img {
+	width: 100%;
+	display: block;
+}
+
+.card-perfume {
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 0.8125rem;
+}
+
+.card-header {
+	font-family: var(--ff-fraunces);
+	font-size: 2rem;
+	color: var(--very-dark-blue);
+	line-height: 1;
+}
+
+.card-prices {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.card-current-price {
+	font-family: var(--ff-fraunces);
+	font-size: 2rem;
+	color: var(--dark-cyan);
+}
+
+.card-ex-price {
+	text-decoration: line-through ;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+
+	cursor: pointer;
+	
+	padding: 15px;
+	
+	border: none;
+	border-radius: 0.5rem;
+
+	background-color: var(--dark-cyan);
+
+	
+	font-weight: 700;
+	font-size: 0.925rem;
+	color: var(--white);
+}
+
+.btn:hover {
+	background-color: hsl(156, 42%, 18%);
+	transition: 0.15s;
+}
+
+@media (min-width: 600px) {
+	.card {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.card-content {
+		padding: 2rem;
+	}
+}
